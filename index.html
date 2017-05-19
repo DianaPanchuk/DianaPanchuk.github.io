@@ -1,1 +1,368 @@
-Hello World
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	
+	<script>
+		function initMap(customMarker) {
+			var uluru = {lat: 55.703845, lng: 37.767974};
+			var markerImage = './img/map-marker.png';
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 17,
+				center: uluru,
+				scrollwheel: false
+			});
+			var marker = new google.maps.Marker({
+				position: uluru,
+				icon: markerImage,
+				map: map
+			});
+
+
+		}
+		setTimeout(function(){ initMap(); }, 1000);
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_RoEd3QQ-rqGF3l1LQIlRJWCl5LW6o2Y"></script>
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<div class="row">
+			<div class="logo col">
+				<h1>Дом в кусково</h1>
+			</div>
+			<div class="menu collapse navbar-collapse col" id="menu">
+				<ul class="nav navbar-nav">
+					<li><a href="">О проекте</a></li>
+					<li><a href="">характеристики</a></li>
+					<li><a href="">квартиры</a></li>
+					<li><a href="">галерея</a></li>
+					<li><a href="">местоположение</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="btn-menu"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button></div>
+			<div class="phone col">
+				<a href="mailto:+74951505485"><i class="icon-phone hidden-lg"></i>
+					<span class="hidden-xs hidden-sm hidden-md">+7 (495) 150-54-85</span></a>
+			</div>
+			<div class="btn-box col hidden-xs hidden-sm hidden-md">
+				<button type="button" class="btn btn-default">Записаться на просмотр</button>
+			</div>
+		</div>
+	</header>
+	
+		<main>
+			<section class="section section-intro">
+				<div class="container">
+					<div class="content">
+						<h2>Дом<br> в Кусково</h2>
+						<div class="desc">
+							<p>Новый взгляд на привычный район</p>
+						</div>
+						<div type="button" class="btn btn-default">Квартиры от 6,4 млн. рублей</div>
+					</div>
+					<div class="link"><a href="#">Дом на Вешняковской</a></div>
+				</div>
+				<div class="image"><img src="./img/ricci.jpg" alt="logo"></div>
+			</section>
+			<section class="section section-about">
+				<div class="container">
+					<div class="col-sm-8 col-lg-6">
+						<h3>о проекте</h3>
+						<div class="desc">
+							<p>Дом в Кусково - новый проект бизнес-класса с подземным паркингом. Архитектурная концепция дома, рассчитанного всего на 81 квартиру, отражает лучшие урбанистические традиции Европы. Благодаря большой площади остекления и использованию светлой цветовой гаммы в отделке фасадов, дом гармонично вписывается в окружающее пространство.</p>
+						</div>
+						<div class="btn btn-primary">Подробнее</div>
+						<div class="about-list">
+							<div class="row">
+								<div class="col-xs-6 col-sm-4"><span class="image i-1"></span><span class="text">Авторская<br> концепция</span></div>
+								<div class="col-xs-6 col-sm-4"><span class="image i-2"></span><span class="text">Разнообразие<br> площадей<br> и планировок </span></div>
+								<div class="col-xs-6 col-sm-4"><span class="image i-3"></span><span class="text">Современные<br> инженерные<br> системы</span></div>
+								<div class="col-xs-6 col-sm-4"><span class="image i-4"></span><span class="text">УДОБНАЯ<br> ТРАНСПОРТНАЯ<br> ДОСТУПНОСТЬ</span></div>
+								<div class="col-xs-6 col-sm-4"><span class="image i-5"></span><span class="text">Детский учебный<br> центр в доме</span></div>
+								<div class="col-xs-6 col-sm-4"><span class="image i-6"></span><span class="text">Рядом пруды<br> и лесопарк</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section-specifications">
+				<div class="container">
+					<div class="col-md-6 left">
+						<ul class="specifications-list list-unstyled clearfix">
+							<li><span>11</span>этажей монолитного корпуса</li>
+							<li><span>81</span>квартира</li>
+							<li><span>3,05 <span class="small">м</span></span>высота потолка</li>
+							<li><span>41</span>Машиномест в подземном<br> паркинге и на гостевых стоянках </li>
+						</ul>
+					</div>
+					<div class="col-md-6 right">
+						<div class="content">
+							<h3>Характеристики</h3>
+							<div class="desc">
+								<p>В комплексе все продумано до мелочей. Для того, чтобы увеличить площадь придомовой территории, на которой будет проведено благоустройство и оборудованы игровые и спортивные площадки, архитекторы спроектировали здание комплекса таким образом, что его нижняя часть приподнята на опорах.</p>
+								<p>Остекление дома выполняется с использованием травмобезопасного стекла, а облицовка его наружных стен осуществляется по системе вентилируемого фасада.</p>
+								<p>Центральная диспетчерская служба всего инженерного оборудования здания, интегрированная с системой безопасности дома, системы видеонаблюдения, охранной сигнализации и контроля доступа обеспечивают безопасность и комфорт жителей.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section-filter">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-4 left">
+							<div class="filter-form-wrap">
+								<h3>Подбор<br> недвижимости</h3>
+								<div class="filter-form">
+									<form action="">
+										<div class="form-content">
+											<div class="form-group">
+												<label class="label">Этаж</label>
+												<select name="" id="" class="selectpicker form-control">
+													<option value="">Любой</option>
+													<option value="">1</option>
+													<option value="">2</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label class="label" for="">Площадь от</label>
+												<input type="text" value="3" class="form-control squareFrom">
+												<span class="label label-center">до</span>
+												<input type="text" value="32" class="form-control squareTo">
+												<span class="label">м2</span>
+											</div>
+											<div class="form-group">
+												<label class="label">Цена от</label>
+												<input type="text" value="3" class="form-control priceFrom">
+												<span class="label label-center">до</span>
+												<input type="text" value="32" class="form-control priceTo">
+											</div>
+										</div>
+										<div class="clearfix">
+											<button class="btn btn-default btn-filter">Применить</button>
+											<button class="btn btn-default btn-refresh"><i class="icon-refresh"></i></button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-8 right">
+							<div class="table-wrap">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>№ квартиры</th>
+											<th>Площадь, м2</th>
+											<th>Этаж <a href="#" class="icon icon-arrow-up"></a></th>
+											<th>Комнат</th>
+											<th>Стоимость, р</th>
+											<th>Планировка</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td>20</td>
+											<td>2</td>
+											<td>3</td>
+											<td>33 450</td>
+											<td><a href="#" class="icon-download"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section-mortgage">
+				<div class="container">
+					<h3>Ипотека</h3>
+					<div class="mortgage-list">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="item"><img src="./img/mortgage-1.png" alt=""></div>
+							</div>
+							<div class="col-sm-4">
+								<div class="item"><img src="./img/mortgage-2.jpg" alt=""></div>
+							</div>
+							<div class="col-sm-4">
+								<div class="item"><img src="./img/mortgage-3.png" alt=""></div>
+							</div>
+							<div class="col-sm-4">
+								<div class="item"><img src="./img/mortgage-4.png" alt=""></div>
+							</div>
+							<div class="col-sm-4">
+								<div class="item"><img src="./img/mortgage-5.jpg" alt=""></div>
+							</div>
+							<div class="col-sm-4">
+								<div class="item"><img src="./img/mortgage-6.jpg" alt=""></div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center">
+						<button class="btn btn-primary">Оставить заявку</button>
+					</div>
+				</div>
+			</section>
+			<section class="section section-gallery">
+				<div class="container container-gallery">
+					<h3>Галерея</h3>
+				</div>
+				<div class="gallery-slider-wrap">
+					<div class="gallery-slider">
+						<div class="item"><img src="./img/gallery-1.jpg" alt=""></div>
+						<div class="item"><img src="./img/gallery-1.jpg" alt=""></div>
+						<div class="item"><img src="./img/gallery-1.jpg" alt=""></div>
+						<div class="item"><img src="./img/gallery-1.jpg" alt=""></div>
+						<div class="item"><img src="./img/gallery-1.jpg" alt=""></div>
+					</div>
+					<div class="gallery-slider-controls js-change-slide hidden-xs hidden-sm">
+						<ul class="clearfix">
+							<li class="active"><img src="./img/gallery-1.jpg" alt="" width="111" height="72"></li>
+							<li><img src="./img/gallery-1.jpg" alt="" width="111" height="72"></li>
+							<li><img src="./img/gallery-3.jpg" alt="" width="111" height="72"></li>
+							<li><img src="./img/gallery-1.jpg" alt="" width="111" height="72"></li>
+							<li><img src="./img/gallery-5.jpg" alt="" width="111" height="72"></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="section section-map">
+				<div class="map" id="map"></div>
+			</section>
+		</main>
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row-form">
+				<div class="row">
+					<div class="col-sm-3">
+						<h5>Записаться на просмотр</h5>
+					</div>
+					<div class="col-sm-9">
+						<form action="">
+							<div class="form-group"><input type="text" class="form-control" placeholder="Имя*" value="Алекс"></div>
+							<div class="form-group"><input type="text" class="form-control" placeholder="Телефон*"></div>
+							<div class="form-group"><input type="text" class="form-control" placeholder="Email"></div>
+							<div class="form-group"><div class="btn btn-default">Отправить</div></div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="row-contact">
+				<div class="row">
+					<div class="col col-sm-4">
+						<h6>Контакты</h6>
+						<p>Москва, Якиманская наб., д. 2, корп. 1 <span>(с 9:00 до 19:00)</span></p>
+					</div>
+					<div class="col col-sm-3 phone">
+						<a href="telto:+74951505485">+7 (495) 150-54-85</a>
+					</div>
+					<div class="col col-sm-5 images">
+						<a href=""><img src="./img/ricci.jpg" alt="" width="46" height="52"></a>
+						<a href=""><img src="./img/img-footer.png" alt="" width="193" height="40"></a>
+						<p class="logo">Дом в кусково</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-bottom">
+			<a href="#">Проектная декларация</a>
+			<a href="#">Разрешение на строительство</a>
+		</div>
+	</footer>
+	
+</div>
+<script src="js/app.js"></script>
+
+</body>
+</html>
