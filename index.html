@@ -11,6 +11,8 @@
 	<link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" type="application/javascript"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js" type="application/javascript"></script>
 	
 	<script>
 		function initMap(customMarker) {
@@ -35,19 +37,19 @@
 </head>
 <body>
 <div class="wrapper">
-	<header class="header">
+	<header class="header default def">
 		<div class="row">
 			<div class="logo col">
 				<h1>Дом в кусково</h1>
 			</div>
 			<div class="menu collapse navbar-collapse col" id="menu">
 				<ul class="nav navbar-nav">
-					<li><a href="">О проекте</a></li>
-					<li><a href="">характеристики</a></li>
-					<li><a href="">квартиры</a></li>
-					<li><a href="">галерея</a></li>
-					<li><a href="">местоположение</a></li>
-					<li><a href="">Контакты</a></li>
+					<li><a href="#section-about">О проекте</a></li>
+					<li><a href="#section-about">характеристики</a></li>
+					<li><a href="#section-filter">квартиры</a></li>
+					<li><a href="#section-gallery">галерея</a></li>
+					<li><a href="#section-map">местоположение</a></li>
+					<li><a href="#section-contacts">Контакты</a></li>
 				</ul>
 			</div>
 			<div class="btn-menu"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
@@ -61,53 +63,55 @@
 					<span class="hidden-xs hidden-sm hidden-md">+7 (495) 150-54-85</span></a>
 			</div>
 			<div class="btn-box col hidden-xs hidden-sm hidden-md">
-				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#enrollToWatching">Записаться на просмотр</button>
+				<button type="button" class="btn btn-default md-trigger" data-modal="enrollToWatching">Записаться на просмотр</button>
 			</div>
 		</div>
 	</header>
 	
 		<main>
-			<section class="section section-intro">
+			<section class="section section-intro" id="section-intro">
 				<div class="container">
 					<div class="content">
-						<h2>Дом<br> в Кусково</h2>
-						<div class="desc">
+						<div class="anim"  data-animorder="1"><h2>Дом<br> в Кусково</h2></div>
+						<div class="desc anim" data-animorder="2">
 							<p>Новый взгляд на привычный район</p>
 						</div>
-						<div type="button" class="btn btn-default">Квартиры от 6,4 млн. рублей</div>
+						<div type="button" class="btn btn-default anim" data-animorder="3">Квартиры от 6,4 млн. рублей</div>
 					</div>
-					<div class="link"><a href="#">Дом на Вешняковской</a></div>
+					<div class="link anim" data-animorder="4"><a href="#">Дом на Вешняковской</a></div>
 				</div>
 				<div class="image"><img src="./img/ricci.jpg" alt="logo"></div>
+				<div class="mouse icon-mouse"></div>
 			</section>
-			<section class="section section-about">
+			<section class="section section-about" id="section-about">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-lg-6">
-							<h3>о проекте</h3>
-							<div class="desc">
+							<div class="wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s"><h3>о проекте</h3></div>
+							<div class="desc wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.75s">
 								<p>Дом в Кусково - новый проект бизнес-класса с подземным паркингом. Архитектурная концепция дома, рассчитанного всего на 81 квартиру, отражает лучшие урбанистические традиции Европы. Благодаря большой площади остекления и использованию светлой цветовой гаммы в отделке фасадов, дом гармонично вписывается в окружающее пространство.</p>
 							</div>
-							<div class="btn btn-primary">Подробнее</div>
+							<div class="btn btn-primary md-trigger wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="1s" data-modal="aboutProject">Подробнее</div>
 							<div class="about-list">
 								<div class="row">
-									<div class="col-xs-6 col-sm-4"><span class="image i-1"></span><span class="text">Авторская<br> концепция</span></div>
-									<div class="col-xs-6 col-sm-4"><span class="image i-2"></span><span class="text">Разнообразие<br> площадей<br> и планировок </span></div>
-									<div class="col-xs-6 col-sm-4"><span class="image i-3"></span><span class="text">Современные<br> инженерные<br> системы</span></div>
-									<div class="col-xs-6 col-sm-4"><span class="image i-4"></span><span class="text">УДОБНАЯ<br> ТРАНСПОРТНАЯ<br> ДОСТУПНОСТЬ</span></div>
-									<div class="col-xs-6 col-sm-4"><span class="image i-5"></span><span class="text">Детский учебный<br> центр в доме</span></div>
-									<div class="col-xs-6 col-sm-4"><span class="image i-6"></span><span class="text">Рядом пруды<br> и лесопарк</span></div>
+									<div class="col-xs-6 col-sm-4 wow fadeInLeft" data-wow-delay="1s"><span class="image i-1"></span><span class="text">Авторская<br> концепция</span></div>
+									<div class="col-xs-6 col-sm-4 wow fadeInLeft" data-wow-delay="1.05s"><span class="image i-2"></span><span class="text">Разнообразие<br> площадей<br> и планировок </span></div>
+									<div class="col-xs-6 col-sm-4 wow fadeInLeft" data-wow-delay="1.1s"><span class="image i-3"></span><span class="text">Современные<br> инженерные<br> системы</span></div>
+									<div class="col-xs-6 col-sm-4 wow fadeInLeft" data-wow-delay="1s"><span class="image i-4"></span><span class="text">УДОБНАЯ<br> ТРАНСПОРТНАЯ<br> ДОСТУПНОСТЬ</span></div>
+									<div class="col-xs-6 col-sm-4 wow fadeInLeft" data-wow-delay="1.05s"><span class="image i-5"></span><span class="text">Детский учебный<br> центр в доме</span></div>
+									<div class="col-xs-6 col-sm-4 wow fadeInLeft" data-wow-delay="1.1s"><span class="image i-6"></span><span class="text">Рядом пруды<br> и лесопарк</span></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="house wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="1.5s"></div>
 			</section>
-			<section class="section section-specifications">
+			<section class="section section-specifications" id="section-specifications">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6 left">
-							<ul class="specifications-list list-unstyled clearfix">
+							<ul class="specifications-list list-unstyled clearfix wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.5s">
 								<li><span>11</span>этажей монолитного корпуса</li>
 								<li><span>81</span>квартира</li>
 								<li><span>3,05 <span class="small">м</span></span>высота потолка</li>
@@ -115,7 +119,7 @@
 							</ul>
 						</div>
 						<div class="col-md-6 right">
-							<div class="content">
+							<div class="content wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.5s">
 								<h3>Характеристики</h3>
 								<div class="desc">
 									<p>В комплексе все продумано до мелочей. Для того, чтобы увеличить площадь придомовой территории, на которой будет проведено благоустройство и оборудованы игровые и спортивные площадки, архитекторы спроектировали здание комплекса таким образом, что его нижняя часть приподнята на опорах.</p>
@@ -127,7 +131,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section section-filter">
+			<section class="section section-filter" id="section-filter">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-4 left">
@@ -138,31 +142,32 @@
 										<div class="form-content">
 											<div class="form-group">
 												<label class="label">Этаж</label>
-												<select name="" id="" class="selectpicker form-control">
-													<option value="">Любой</option>
-													<option value="">1</option>
-													<option value="">2</option>
-													<option value="">3</option>
+												<select name="floor" id="floor" class="selectpicker form-control">
+													<option value="0">Любой</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
 												</select>
 											</div>
 											<div class="form-group">
 												<label class="label label-title" for="">Площадь</label>
 												<span class="label"> от</span>
-												<input type="text" value="3" class="form-control squareFrom">
+												<input type="text" value="3" class="form-control squareFrom js-numbers">
 												<span class="label label-center">до</span>
-												<input type="text" value="32" class="form-control squareTo">
-												<span class="label">м2</span>
+												<input type="text" value="32" class="form-control squareTo js-numbers">
+												<span class="label">м<sup>2</sup></span>
 											</div>
 											<div class="form-group">
 												<label class="label label-title">Цена</label>
 												<span class="label"> от</span>
-												<input type="text" value="3" class="form-control priceFrom">
+												<input type="text" value="3" class="form-control priceFrom js-numbers">
 												<span class="label label-center">до</span>
-												<input type="text" value="32" class="form-control priceTo">
+												<input type="text" value="32" class="form-control priceTo js-numbers">
+												<label class="label">Р</label>
 											</div>
 										</div>
 										<div class="clearfix">
-											<button class="btn btn-default btn-filter">Применить</button>
+											<button class="btn btn-default btn-filter js-filter-table">Применить</button>
 											<button class="btn btn-default btn-refresh"><i class="icon-refresh"></i></button>
 										</div>
 									</form>
@@ -171,7 +176,7 @@
 						</div>
 						<div class="col-md-8 right">
 							<div class="table-wrap">
-								<table class="table table-striped">
+								<table class="table table-striped" id="table-filter">
 									<thead>
 										<tr>
 											<th>№ квартиры</th>
@@ -191,82 +196,42 @@
 										</tr>
 										<tr>
 											<td>1</td>
-											<td>20</td>
-											<td>2</td>
+											<td data-square="2">2</td>
+											<td data-floor="4">4</td>
 											<td>3</td>
-											<td>33 450</td>
+											<td data-price="1 450">1 450</td>
 											<td><a href="#" class="icon-download"></a></td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>20</td>
-											<td>2</td>
+											<td data-square="20">20</td>
+											<td data-floor="2">2</td>
 											<td>3</td>
-											<td>33 450</td>
+											<td data-price="33 450">33 450</td>
 											<td><a href="#" class="icon-download"></a></td>
 										</tr>
 										<tr>
 											<td>3</td>
-											<td>20</td>
-											<td>2</td>
+											<td data-square="20">20</td>
+											<td data-floor="2">2</td>
 											<td>3</td>
-											<td>33 450</td>
+											<td data-price="33 450">33 450</td>
 											<td><a href="#" class="icon-download"></a></td>
 										</tr>
 										<tr>
 											<td>4</td>
-											<td>20</td>
-											<td>2</td>
+											<td data-square="20">20</td>
+											<td data-floor="2">2</td>
 											<td>3</td>
-											<td>33 450</td>
+											<td data-price="33 450">33 450</td>
 											<td><a href="#" class="icon-download"></a></td>
 										</tr>
 										<tr>
 											<td>5</td>
-											<td>20</td>
-											<td>2</td>
+											<td data-square="20">20</td>
+											<td data-floor="2">2</td>
 											<td>3</td>
-											<td>33 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
-										<tr>
-											<td>6</td>
-											<td>20</td>
-											<td>2</td>
-											<td>3</td>
-											<td>33 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
-										<tr>
-											<td>7</td>
-											<td>20</td>
-											<td>2</td>
-											<td>3</td>
-											<td>33 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
-										<tr>
-											<td>8</td>
-											<td>20</td>
-											<td>2</td>
-											<td>3</td>
-											<td>33 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
-										<tr>
-											<td>9</td>
-											<td>20</td>
-											<td>2</td>
-											<td>3</td>
-											<td>33 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
-										<tr>
-											<td>10</td>
-											<td>20</td>
-											<td>2</td>
-											<td>3</td>
-											<td>33 450</td>
+											<td data-price="33 45">33 450</td>
 											<td><a href="#" class="icon-download"></a></td>
 										</tr>
 									</tbody>
@@ -302,11 +267,11 @@
 						</div>
 					</div>
 					<div class="text-center">
-						<button class="btn btn-primary">Оставить заявку</button>
+						<button class="btn btn-primary md-trigger" data-modal="leaveApplication">Оставить заявку</button>
 					</div>
 				</div>
 			</section>
-			<section class="section section-gallery">
+			<section class="section section-gallery" id="section-gallery">
 				<div class="container container-gallery">
 					<h3>Галерея</h3>
 				</div>
@@ -329,11 +294,11 @@
 					</div>
 				</div>
 			</section>
-			<section class="section section-map">
+			<section class="section section-map" id="section-map">
 				<div class="map" id="map"></div>
 			</section>
 		</main>
-	<footer class="footer">
+	<footer class="footer" id="section-contacts">
 		<div class="container-fluid">
 			<div class="row-form">
 				<div class="row">
@@ -341,11 +306,11 @@
 						<h5>Записаться на просмотр</h5>
 					</div>
 					<div class="col-sm-12 col-lg-9">
-						<form action="">
-							<div class="form-group"><input type="text" class="form-control" placeholder="Имя*" value="Алекс"></div>
-							<div class="form-group"><input type="text" class="form-control" placeholder="Телефон*"></div>
-							<div class="form-group"><input type="text" class="form-control" placeholder="Email"></div>
-							<div class="form-group"><button class="btn btn-default">Отправить</button></div>
+						<form action="" method="POST" class="js-enroll-to-watching-form-footer">
+							<div class="form-group"><input type="text" name="name" class="form-control" placeholder="Имя*"></div>
+							<div class="form-group"><input type="text" name="phone" class="form-control" placeholder="Телефон*"></div>
+							<div class="form-group"><input type="email" name="email" class="form-control" placeholder="Email"></div>
+							<div class="form-group"><button class="btn btn-default js-submit-form" type="submit">Отправить</button></div>
 						</form>
 					</div>
 				</div>
@@ -374,42 +339,62 @@
 	</footer>
 	
 </div>
-<div class="modal fade" tabindex="-1" role="dialog" id="enrollToWatching">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
+<div class="md-modal md-effect-1" id="enrollToWatching">
+	<div class="modal-dialog">
+		<div class="modal-content md-content">
 			<div class="modal-header">
 				<h4 class="modal-title">Записаться на просмотр</h4>
 			</div>
 			<div class="modal-body">
 				<div class="form">
-					<form action="">
-						<div class="form-group"><input type="text" class="form-control" placeholder="Имя*" value=""></div>
-						<div class="form-group"><input type="text" class="form-control" placeholder="Телефон*" value=""></div>
-						<div class="form-group"><input type="text" class="form-control" placeholder="Email" value=""></div>
+					<form action="" method="POST" class="js-enroll-to-watching-form">
+						<div class="form-group"><input type="text" name="name" class="form-control" placeholder="Имя*" value=""></div>
+						<div class="form-group"><input type="text" name="phone" class="form-control" placeholder="Телефон*" value=""></div>
+						<div class="form-group"><input type="email" name="email" class="form-control" placeholder="Email" value=""></div>
 						<p class="desc">* – обязательные поля</p>
-						<div class="form-group"><div class="btn btn-default btn-black">Отправить</div></div>
+						<div class="form-group"><button type="submit" class="btn btn-default btn-black js-submit-form">Отправить</button></div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="modal fade" tabindex="-1" role="dialog" id="enrollToWatchingResponse">
+<div class="md-modal md-effect-1" id="leaveApplication">
+	<div class="modal-dialog">
+		<div class="modal-content md-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Оставить заявку</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form">
+					<form action="" method="POST" class="js-leave-application-form">
+						<div class="form-group"><input type="text" name="name" class="form-control" placeholder="Имя*" value=""></div>
+						<div class="form-group"><input type="text" name="phone" class="form-control" placeholder="Телефон*" value=""></div>
+						<div class="form-group"><input type="email" name="email" class="form-control" placeholder="Email" value=""></div>
+						<p class="desc">* – обязательные поля</p>
+						<div class="form-group"><button type="submit" class="btn btn-default btn-black js-submit-form">Отправить</button></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="md-modal md-effect-1" id="enrollToWatchingResponse">
 	<div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content md-content">
 			<div class="modal-header">
 				<h4 class="modal-title">Спасибо!</h4>
 			</div>
 			<div class="modal-body">
 				<p>Наш менеджер свяжется с вами в течение нескольких минут.</p>
-				<div class="form-group"><div class="btn btn-default btn-black">OK</div></div>
+				<div class="form-group"><div class="btn btn-default btn-black js-close-modal">OK</div></div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="modal fade big" tabindex="-1" role="dialog" id="aboutProject">
+<div class="md-modal md-effect-1 big" id="aboutProject">
 	<div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content md-content">
 			<div class="modal-header">
 				<h4 class="modal-title">о проекте</h4>
 			</div>
@@ -420,6 +405,7 @@
 		</div>
 	</div>
 </div>
+<div class="md-overlay"></div>
 <script src="js/app.js"></script>
 
 </body>
