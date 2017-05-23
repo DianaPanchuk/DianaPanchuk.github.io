@@ -28,8 +28,6 @@
 				icon: markerImage,
 				map: map
 			});
-
-
 		}
 		setTimeout(function(){ initMap(); }, 1000);
 	</script>
@@ -43,6 +41,7 @@
 				<h1>Дом в кусково</h1>
 			</div>
 			<div class="menu collapse navbar-collapse col" id="menu">
+				<button type="button" class="hidden-lg btn btn-default md-trigger" data-modal="enrollToWatching">Записаться на просмотр</button>
 				<ul class="nav navbar-nav">
 					<li><a href="#section-about">О проекте</a></li>
 					<li><a href="#section-about">характеристики</a></li>
@@ -53,7 +52,6 @@
 				</ul>
 			</div>
 			<div class="btn-menu"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -106,6 +104,7 @@
 					</div>
 				</div>
 				<div class="house wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="1.5s"></div>
+				<div class="particle"></div>
 			</section>
 			<section class="section section-specifications" id="section-specifications">
 				<div class="container">
@@ -147,41 +146,32 @@
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
+													<option value="4">4</option>
 												</select>
 											</div>
 											<div class="form-group">
-												<label class="label label-title" for="">Площадь</label>
-												<span class="label"> от</span>
-												<input type="text" value="3" class="form-control squareFrom js-numbers">
-												<span class="label label-center">до</span>
-												<input type="text" value="32" class="form-control squareTo js-numbers">
-												<span class="label">м<sup>2</sup></span>
+												<label class="label label-title">Площадь</label><span class="label"> от</span><input type="text" value="3" class="form-control squareFrom js-numbers"><span class="label label-center">до</span><input type="text" value="32" class="form-control squareTo js-numbers"><span class="label">м<sup>2</sup></span>
 											</div>
 											<div class="form-group">
-												<label class="label label-title">Цена</label>
-												<span class="label"> от</span>
-												<input type="text" value="3" class="form-control priceFrom js-numbers">
-												<span class="label label-center">до</span>
-												<input type="text" value="32" class="form-control priceTo js-numbers">
-												<label class="label">Р</label>
+												<label class="label label-title">Цена</label><span class="label"> от</span><input type="text" value="3" class="form-control priceFrom js-numbers"><span class="label label-center">до</span><input type="text" value="32" class="form-control priceTo js-numbers"><label class="label"><span class="rub">Р</span></label>
 											</div>
 										</div>
 										<div class="clearfix">
 											<button class="btn btn-default btn-filter js-filter-table">Применить</button>
-											<button class="btn btn-default btn-refresh"><i class="icon-refresh"></i></button>
+											<button class="btn btn-default btn-refresh js-filter-reset"><i class="icon-refresh"></i></button>
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-8 right">
-							<div class="table-wrap">
-								<table class="table table-striped" id="table-filter">
+							<div class="table-wrap table-header">
+								<table class="table">
 									<thead>
 										<tr>
 											<th>№ квартиры</th>
 											<th>Площадь, м2</th>
-											<th>Этаж <a href="#" class="icon icon-arrow-up"></a></th>
+											<th><a href="#" class="text js-sortable">Этаж <i class="icon icon-arrow-up"></i></a></th>
 											<th>Комнат</th>
 											<th>Стоимость, р</th>
 											<th>Планировка</th>
@@ -194,52 +184,125 @@
 												<p>Квартир не найдено!</p>
 											</td>
 										</tr>
-										<tr>
-											<td>1</td>
-											<td data-square="2">2</td>
-											<td data-floor="4">4</td>
-											<td>3</td>
-											<td data-price="1 450">1 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td data-square="20">20</td>
-											<td data-floor="2">2</td>
-											<td>3</td>
-											<td data-price="33 450">33 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td data-square="20">20</td>
-											<td data-floor="2">2</td>
-											<td>3</td>
-											<td data-price="33 450">33 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td data-square="20">20</td>
-											<td data-floor="2">2</td>
-											<td>3</td>
-											<td data-price="33 450">33 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td data-square="20">20</td>
-											<td data-floor="2">2</td>
-											<td>3</td>
-											<td data-price="33 45">33 450</td>
-											<td><a href="#" class="icon-download"></a></td>
-										</tr>
 									</tbody>
 								</table>
+							</div>
+							<div class="table-wrap nano">
+								<div class="table-content nano-content">
+									<table class="table table-striped" id="table-filter">
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td data-square="2">2</td>
+												<td data-floor="1">1</td>
+												<td>3</td>
+												<td data-price="1450">1 450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td data-square="20">20</td>
+												<td data-floor="3">3</td>
+												<td>3</td>
+												<td data-price="33450">33 450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td data-square="20">20</td>
+												<td data-floor="2">2</td>
+												<td>3</td>
+												<td data-price="450">450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td data-square="20">20</td>
+												<td data-floor="1">1</td>
+												<td>3</td>
+												<td data-price="33450">33 450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td data-square="20">20</td>
+												<td data-floor="2">2</td>
+												<td>3</td>
+												<td data-price="3345">3345</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td data-square="2">2</td>
+												<td data-floor="1">1</td>
+												<td>3</td>
+												<td data-price="1450">1 450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td data-square="20">20</td>
+												<td data-floor="3">3</td>
+												<td>3</td>
+												<td data-price="33450">33 450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td data-square="20">20</td>
+												<td data-floor="2">2</td>
+												<td>3</td>
+												<td data-price="450">450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td data-square="20">20</td>
+												<td data-floor="1">1</td>
+												<td>3</td>
+												<td data-price="33450">33 450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td data-square="20">20</td>
+												<td data-floor="2">2</td>
+												<td>3</td>
+												<td data-price="3345">3345</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td data-square="20">20</td>
+												<td data-floor="2">2</td>
+												<td>3</td>
+												<td data-price="450">450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td data-square="20">20</td>
+												<td data-floor="1">1</td>
+												<td>3</td>
+												<td data-price="33450">33 450</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td data-square="20">20</td>
+												<td data-floor="2">2</td>
+												<td>3</td>
+												<td data-price="3345">3345</td>
+												<td><a href="#" class="icon-download"></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="particle white"></div>
 			</section>
 			<section class="section section-mortgage">
 				<div class="container">
@@ -270,6 +333,8 @@
 						<button class="btn btn-primary md-trigger" data-modal="leaveApplication">Оставить заявку</button>
 					</div>
 				</div>
+				<div class="container particle particle-1"></div>
+				<div class="container particle particle-2"></div>
 			</section>
 			<section class="section section-gallery" id="section-gallery">
 				<div class="container container-gallery">

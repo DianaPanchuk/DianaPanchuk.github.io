@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$black".
-        on line 18 of src/scss/header.scss
+        on line 19 of src/scss/header.scss
 
-13: 	.navbar-toggle {
 14: 		margin: 0;
 15: 		padding: 18px 17px 16px 18px;
 16: 		float: none;
-17: 		.icon-bar {
-18: 			background: $black;
-19: 			width: 21px;
-20: 			height: 2px;
-21: 			display: block;
-22: 			& + .icon-bar {
-23: 				margin-top: 4px;
+17: 		outline: none;
+18: 		.icon-bar {
+19: 			background: $black;
+20: 			width: 21px;
+21: 			height: 2px;
+22: 			display: block;
+23: 			transition: all 0.3s ease;
+24: 			& + .icon-bar {
 
 Backtrace:
-src/scss/header.scss:18
+src/scss/header.scss:19
 /var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -89,4 +89,4 @@ src/scss/header.scss:18
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$black\".\A         on line 18 of src/scss/header.scss\A \A 13: 	.navbar-toggle {\A 14: 		margin: 0;\A 15: 		padding: 18px 17px 16px 18px;\A 16: 		float: none;\A 17: 		.icon-bar {\A 18: 			background: $black;\A 19: 			width: 21px;\A 20: 			height: 2px;\A 21: 			display: block;\A 22: 			& + .icon-bar {\A 23: 				margin-top: 4px;"; }
+  content: "Error: Undefined variable: \"$black\".\A         on line 19 of src/scss/header.scss\A \A 14: 		margin: 0;\A 15: 		padding: 18px 17px 16px 18px;\A 16: 		float: none;\A 17: 		outline: none;\A 18: 		.icon-bar {\A 19: 			background: $black;\A 20: 			width: 21px;\A 21: 			height: 2px;\A 22: 			display: block;\A 23: 			transition: all 0.3s ease;\A 24: 			& + .icon-bar {"; }
