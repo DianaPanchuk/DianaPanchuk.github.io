@@ -14,24 +14,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" type="application/javascript"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js" type="application/javascript"></script>
 	
-	<script>
-		function initMap(customMarker) {
-			var uluru = {lat: 55.703845, lng: 37.767974};
-			var markerImage = './img/map-marker.png';
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 17,
-				center: uluru,
-				scrollwheel: false
-			});
-			var marker = new google.maps.Marker({
-				position: uluru,
-				icon: markerImage,
-				map: map
-			});
-		}
-		setTimeout(function(){ initMap(); }, 1000);
-	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_RoEd3QQ-rqGF3l1LQIlRJWCl5LW6o2Y"></script>
+	<script src="http://googlemapapitutorial.com/js/infobubble.js"></script>
+	<script async defer src="http://googlemapapitutorial.com/js/infobubble.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -81,8 +66,9 @@
 				<div class="image"><img src="./img/ricci.jpg" alt="logo"></div>
 				<div class="mouse icon-mouse"></div>
 			</section>
-			<section class="section section-about" id="section-about">
+			<section class="section section-about parallax-container" id="section-about">
 				<div class="container">
+					<div class="particle"></div>
 					<div class="row">
 						<div class="col-md-8 col-lg-6">
 							<div class="wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s"><h3>о проекте</h3></div>
@@ -103,8 +89,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="house wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="1.5s"></div>
-				<div class="particle"></div>
+				<div class="house-wrap  wow fadeInRight" data-wow-duration="0.75s" data-wow-delay="1.5s">
+					<div class="house parallax"></div>
+				</div>
 			</section>
 			<section class="section section-specifications" id="section-specifications">
 				<div class="container">

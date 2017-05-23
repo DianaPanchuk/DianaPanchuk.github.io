@@ -3481,6 +3481,7 @@ perspective effects (not including the modals and the overlay).
 .header .navbar-nav > li > a:hover, .header .navbar-nav > li > a:focus { border-color: #fff; }
 .header.fixed2 { -webkit-transform: translate(0, -100%); -ms-transform: translate(0, -100%); transform: translate(0, -100%); position: fixed; }
 .header.fixed2.fixed { -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; background: #fff; padding: 8px 0 8px 24px; }
+@media (min-width: 1366px) { .header.fixed2.fixed { padding: 8px 24px; } }
 .header.fixed2.fixed .logo h1, .header.fixed2.fixed .navbar-nav > li > a, .header.fixed2.fixed .navbar-nav > li > a:visited, .header.fixed2.fixed .phone a, .header.fixed2.fixed .phone a:visited { color: #333333; }
 .header.fixed2.fixed .navbar-nav > li > a:hover, .header.fixed2.fixed .btn { border-color: #333333; }
 
@@ -3634,9 +3635,10 @@ label.error { display: none !important; }
 
 .section-about { position: relative; }
 .section-about .container { overflow: hidden; padding-top: 70px; padding-bottom: 15px; }
-.section-about .house { position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: url("../img/bg-about.png") no-repeat right bottom/auto; }
+.section-about .house-wrap { position: absolute; top: 0; right: 0; height: 100%; width: 100%; }
+.section-about .house { height: -webkit-calc(100% + 110px); height: calc(100% + 110px); width: -webkit-calc(100% + 140px); width: calc(100% + 140px); position: relative; bottom: -110px; right: -140px; background: url("../img/bg-about-new.png") no-repeat right bottom/auto; }
 .section-about .desc { margin-bottom: 30px; }
-.section-about .btn-primary { width: 220px; }
+.section-about .btn-primary { width: 220px; position: relative; z-index: 2; }
 .section-about .about-list { padding-top: 45px; }
 .section-about .about-list .image { display: block; width: 69px; height: 69px; background-position: left center; background-repeat: no-repeat; background-size: auto; margin-bottom: 15px; }
 .section-about .about-list .image.i-1 { background-image: url("../img/about-1.png"); }
@@ -3646,8 +3648,7 @@ label.error { display: none !important; }
 .section-about .about-list .image.i-5 { background-image: url("../img/about-5.png"); }
 .section-about .about-list .image.i-6 { background-image: url("../img/about-6.png"); }
 .section-about .about-list .text { display: block; height: 44px; text-transform: uppercase; font-size: 14px; line-height: 16px; font-family: "Circe-Bold", sans-serif; margin-bottom: 30px; }
-@media (max-width: 991px) { .section-about .house { width: 0; } }
-@media (min-width: 992px) and (max-width: 1365px) { .section-about .house { width: 30%; background-position: left bottom; } }
+@media (max-width: 1365px) { .section-about .house-wrap { display: none; } }
 
 .section-specifications { position: relative; }
 .section-specifications:before { content: ""; position: absolute; top: 0; left: 0; width: 50%; height: 100%; background: url("../img/bg-section-specifications.jpg") no-repeat center center/cover; z-index: 1; }

@@ -11,7 +11,7 @@ $( function() {
 		iOSNativeScrolling: true
 	});
 
-	// $('.house').jKit('parallax', { 'strength': '3', 'axis': 'both' });
+	$('.parallax-container').jKit('parallax', { 'strength': '0.5', 'axis': 'x' });
 
 	var gallery = $( '.gallery-slider' ).lightSlider({
 		item: 1,
